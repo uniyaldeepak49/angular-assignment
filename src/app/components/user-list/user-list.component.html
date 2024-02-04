@@ -1,0 +1,44 @@
+<app-header></app-header>
+
+<div class="container mt-2">
+  <table class="responsive-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>First Name</th>
+        <th>Middle Name</th>
+        <th>Sur Name</th>
+        <th>Email</th>
+        <th>Contact No.</th>
+        <th>Designation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngIf="users?.length">
+        <tr *ngFor="let user of users">
+          <td>
+            {{ user.id }}
+          </td>
+          <td>
+            {{ user.firstName }}
+          </td>
+          <td>
+            {{ user.middleName }}
+          </td>
+          <td>
+            {{ user.surName }}
+          </td>
+          <td>
+            {{ user.email }}
+          </td>
+          <td>
+            {{ user.contactNo }}
+          </td>
+          <td>
+            {{ user.designation }}
+          </td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>
